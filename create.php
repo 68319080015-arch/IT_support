@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connect.php'; // ใช้ไฟล์ PDO ของคุณ
+include '../connect.php'; // ใช้ไฟล์ PDO ของคุณ
 
 // ตรวจสอบ Login ก่อนใช้งาน
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg w-100 mb-3"><i class="bi bi-save me-2"></i> บันทึกการแจ้งซ่อม</button>
-        <a href="index.php" class="btn btn-outline-secondary w-100"><i class="bi bi-arrow-left"></i> กลับสู่หน้า Dashboard</a>
+        <a href="admin_dashboard.php" class="btn btn-outline-secondary w-100"><i class="bi bi-arrow-left"></i> กลับสู่หน้า Dashboard</a>
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
